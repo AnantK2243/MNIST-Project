@@ -1,4 +1,4 @@
-#include "network.h"
+#include "Network.h"
 #include <cmath>
 #include <ctime>
 #include <iostream>

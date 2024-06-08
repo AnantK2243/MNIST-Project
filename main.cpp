@@ -1,4 +1,4 @@
-#include "network.h"
+#include "Network.h"
 #include <iostream>
 #include <random>
 #include <ctime>
@@ -6,7 +6,7 @@
 
 using namespace std;
 
-const int epoch_num = 200;
+const int epoch_num = 1000;
 const int num_hidden_neurons = 20;
 const int num_layers = 3;
 const int train_size = 5000;

@@ -157,7 +157,8 @@ double Network::calculate_cost(vector<double> &input_arr, int actual, vector<vec
 }
 
 void Network::apply(vector<vector<double>>& delta_biases, vector<vector<vector<double>>>& delta_weights) {
-    double lr = progress < 1000 ? learning_rate / (double) progress : 0.01;
+    //double lr = progress < 1000 ? learning_rate / (double) progress : 0.01;
+    double lr = learning_rate;
     for (int i = 0; i < num_layers - 1; i++) {
         for (int j = 0; j < neurons[i + 1]; j++) {
             biases[i][j] -= lr * (delta_biases[i][j] / train_size);

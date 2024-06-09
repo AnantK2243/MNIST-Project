@@ -8,15 +8,15 @@
 
 using namespace std;
 
-const int max_threads = 16;
+const int max_threads = 60;
 
-const int epoch_num = 1500;
+const int epoch_num = 100;
 const int num_hidden_neurons = 16;
 const int num_layers = 4;
-const int train_size = 20000;
-double learning_rate = 10;
+const int train_size = 60000;
+double learning_rate = 1.0;
 const int neurons[] = {784, num_hidden_neurons, num_hidden_neurons, 10};
-const bool get_start = 0;
+const bool get_start = 1;
 
 int progress = 1;
 int image_size;
@@ -144,11 +144,7 @@ int main() {
 
         num_correct = net.evaluate();
 
-        if (start = -1) start = num_correct;
-
         cout << "Epoch (" << x << "): " << num_correct << "/10000" << endl;
     }
-
-    if(num_correct > start)
-        net.store();
+    net.store();
 }

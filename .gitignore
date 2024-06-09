@@ -1,0 +1,4 @@
+# Ignore MNIST Data
+*.idx1-ubyte
+*.idx3-ubyte
+*.exe
